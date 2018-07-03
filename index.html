@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Train Scheduler</title>
+    <!-- Link CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Link Flex classes -->
+    <link rel="stylesheet" type="text/css" href="assets/css/flex.css">
 </head>
 
 <body>
-
+    <!-- Main Container -->
     <div class="container">
-
-        <div class="main-title">
+        <!-- Main Title -->
+        <div class="main-title flex flex-column flex-v-center">
             <h1>Anytime is Train Time</h1>
             <h4>Choo Choo. Chee Chee.</h4>
         </div>
-
-        <div class="train-schedule">
+        <!-- Schedule Container -->
+        <div class="schedule-container">
 
         </div>
-
-        <div class="add-train">
-            
+        <!-- Add Train Container -->
+        <div class="train-form-container">
+            <form class="train-form flex flex-column flex-center">
+                <!-- Train Name -->
+                <div class="form-input">
+                    <label for="train-name">Train Name</label>
+                    <input type="text" id="train-name">
+                </div>
+                <!-- Destination -->
+                <div class="form-input">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination">
+                </div>
+                <!-- First Train Time -->
+                <div class="form-input">
+                    <label for="first-train">First Train Time(HH:mm - military time)</label>
+                    <input type="text" id="first-train">
+                </div>
+                <!-- Train Frequency -->
+                <div class="form-input">
+                    <label for="frequency">Frequency(min)</label>
+                    <input type="text" id="frequency">
+                </div>
+                <div class="submit-form">
+                    <input type="submit" id="submit-train">
+                </div>
+            </form>
         </div>
 
     </div>
