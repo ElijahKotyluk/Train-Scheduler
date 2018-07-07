@@ -44,18 +44,18 @@ var config = {
   database.on('child_added', function(childSnapshot, prevChildKey) {
 
     let data = childSnapshot.val();
-    let trainName = data.name;
-    let destination = data.destination;
-    let frequency = data.frequency;
-    let firstTrain = data.firstTrain;
+    let trainNames = data.name;
+    let tDestination = data.destination;
+    let trainFrequency = data.trainFrequency;
+    let theFirstTrain = data.firstTrain;
 
-    let timeDifference = moment().diff(moment.unix(firstTrain), 'minutes');
-    let remainder = moment().diff(moment.unix(firstTrain), 'minutes');
-    let minutes = frequency - remainder;
+    let timeDifference = moment().diff(moment.unix(theFirstTrain), 'minutes');
+    let remainder = timeDifference % trainFrequency;
+    let minutes = trainFrequency - remainder;
 
     let arrival = moment().add(minutes, 'm').format('hh:mm A');
 
-    $('#train-table > tbody').append('<tr><td>' + trainName + '</td><td>' + destination + "</td><td id='min'>" + frequency + "</td><td id='min'>" + arrival + "</td><td id='min'>" + minutes + '</td></tr>');
+    $('#train-table > tbody').append('<tr><td>' + trainNames + '</td><td>' + tDestination + "</td><td id='min'>" + trainFrequency + "</td><td id='min'>" + arrival + "</td><td id='min'>" + minutes + '</td></tr>');
   });
 
   $('#current-time').append(moment().format('hh:mm A'));

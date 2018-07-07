@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Train Scheduler</title>
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Link CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Link Flex classes -->
@@ -13,7 +15,7 @@
 <body>
 
     <!-- Main Container -->
-    <div class="container">
+    <div class="container flex flex-column flex-center space-around">
 
         <!-- Main Title -->
         <div class="main-title flex flex-column flex-v-center">
@@ -21,8 +23,13 @@
             <h4>Choo Choo. Chee Chee.</h4>
         </div>
 
+        <!-- Current time -->
+        <div class="time-container">
+            <div id="current-time"></div>
+        </div>
+
         <!-- Schedule Container -->
-        <div class="schedule-container">
+        <div class="schedule-container space-around">
             <div class="schedule-heading">
                 <h3 class="schedule-title">Current Train Schedule</h3>
             </div>
@@ -41,35 +48,35 @@
 
         <!-- Add Train Container -->
         <div class="train-form-container flex flex-column flex-center">
-            <form class="train-form flex-start">
+            <form class="train-form">
                 <!-- Train Name -->
                 <div class="form-input">
                     <label for="train-name">Train Name</label>
-                    <input type="text" id="train-name">
+                    <input type="text" id="train-name" class="form-control" placeholder="Train Name...">
                 </div>
                 <!-- Destination -->
                 <div class="form-input">
                     <label for="destination">Destination</label>
-                    <input type="text" id="destination">
+                    <input type="text" id="destination" class="form-control" placeholder="Destination...">
                 </div>
                 <!-- First Train Time -->
                 <div class="form-input">
                     <label for="first-train">First Train Time(HH:mm - military time)</label>
-                    <input type="text" id="first-train">
+                    <input type="time" id="first-train" lass="form-control mx-sm-3 mb-2">
                 </div>
                 <!-- Train Frequency -->
                 <div class="form-input">
                     <label for="frequency">Frequency(min)</label>
-                    <input type="text" id="frequency">
+                    <input type="number" id="frequency" class="form-control mx-sm-3 mb-2">
                 </div>
                 <div class="submit-form">
-                    <input type="submit" id="submit-train">
+                    <input type="submit" id="submit-train" class="btn btn-primary">
                 </div>
             </form>
         </div>
 
     </div>
-
+    
     <!-- Link jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Link Firebase -->

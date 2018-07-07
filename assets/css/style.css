@@ -13,8 +13,103 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     margin: 0;
+    background-color: #8016c7;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+
+.container {
+    height: 80%;
+}
+
+.main-title {
+    border: 0.0625em solid #a75de4;
+    border-radius: 1.5625em;
+    width: 60%;
+    background-color: #a75de4;
+}
+
+.time-container {
+    padding-top: 1.8em;
+}
+
+#current-time {
+    font-size: 2em;
+}
+
+
+.schedule-container {
+    width: 60%;
+}
+
+#train-table {
+    width: 100%;
+}
+
+#train-table tr:nth-child(even) {
+    background-color: #a75de4;
+}
+
+#train-table tr:hover {
+    background-color: #ddd;
+}
+
+#train-table td,
+#train-table th {
+    border: 0.0625em solid #ddd;
+    padding: 0.6250em;
+}
+
+#train-table th {
+    height: 3.125em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    text-align: left;
 }
 
 label {
     display: block;
+}
+
+.train-form-container {
+    width: 60%;
+}
+
+.train-form {
+    width: 100%;
+}
+
+input {
+    height: 2.5em;
+}
+
+#train-name,
+#destination {
+    width: 15em;
+}
+
+#frequency, 
+#first-train {
+    width: 7em;
+    border: 1px solid #ccc;
+    border-radius: 0.2625em;
+    color: #000000;
+}
+
+#submit-train {
+    background-color: #a75de4;
+    border-color: #a75de4;
+}
+
+form .form-input {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
 }

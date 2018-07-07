@@ -58,3 +58,15 @@
 .flex-end {
     align-items: flex-end;
 }
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-v-between {
+    align-content: space-between;
+}
