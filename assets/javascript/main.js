@@ -42,7 +42,6 @@ var config = {
 
 
   database.on('child_added', function(childSnapshot, prevChildKey) {
-
     let data = childSnapshot.val();
     let trainNames = data.name;
     let tDestination = data.destination;
@@ -55,7 +54,13 @@ var config = {
 
     let arrival = moment().add(minutes, 'm').format('hh:mm A');
 
-    $('#train-table > tbody').append('<tr><td>' + trainNames + '</td><td>' + tDestination + "</td><td id='min'>" + trainFrequency + "</td><td id='min'>" + arrival + "</td><td id='min'>" + minutes + '</td></tr>');
+    $('#train-table > tbody').append("<tr><td>" + trainNames + 
+    '</td><td>' + tDestination + 
+    "</td><td id='min'>" + trainFrequency + 
+    "</td><td id='min'>" + arrival + 
+    "</td><td id='min'>" + minutes + 
+    "</td<td>" + 
+    '</td></td>');
   });
 
   $('#current-time').append(moment().format('hh:mm A'));
